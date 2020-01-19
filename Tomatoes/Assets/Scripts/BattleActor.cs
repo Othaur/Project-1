@@ -5,7 +5,7 @@ using UnityEngine;
 namespace ReginaGameDev
 {
     // Testing Class for Actors in BattleController (i.e. our 'Worms' aka Tomatoes and other veggies of doom)
-    public class BattleActor
+    public class BattleActor: MonoBehaviour
     {
         public string name;
         public float speed;

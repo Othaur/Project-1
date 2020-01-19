@@ -92,7 +92,7 @@ public class CameraFollow : MonoBehaviour
             float cameraMoveSpeed = 2f;
 
             transform.position = //Vector3.Lerp(cameraFollowPosition, transform.position, followSpeed);
-                transform.position + cameraMoveDir * distance * followSpeed * Time.deltaTime;
+                transform.position + cameraMoveDir * distance * followSpeed * GameHandler.gameDeltaTime;
         
     }
 
@@ -102,7 +102,7 @@ public class CameraFollow : MonoBehaviour
 
         float cameraZoomDifference = cameraZoom - myCamera.orthographicSize;
 
-        myCamera.orthographicSize += cameraZoomDifference * cameraZoomSpeed * Time.deltaTime;
+        myCamera.orthographicSize += cameraZoomDifference * cameraZoomSpeed * GameHandler.gameDeltaTime;
 
         if (cameraZoomDifference > 0)
         {

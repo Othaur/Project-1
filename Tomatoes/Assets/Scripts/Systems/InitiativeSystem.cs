@@ -16,11 +16,16 @@ namespace ReginaGameDev
             }
 
             // For testing purposes, let's set up 8 potential "Actors" - 4 Players, 4 Enemies
-            Debug_PopulateInitiativeQueue(4, 4);
+           // Debug_PopulateInitiativeQueue(4, 4);
 
-            ReorderInitiativeQueue();
+            //ReorderInitiativeQueue();
 
-            Debug_ShowInitiativeQueue();
+          //  Debug_ShowInitiativeQueue();
+        }
+
+        public BattleActor GetCurrentActor()
+        {
+            return queue[0];
         }
 
         private static int InitiativeQueueSortBySpeed(BattleActor x, BattleActor y) // this method becomes an IComparable by default and when used on a List<> must pass x and y of the type in the list (i.e. BattleActor in this case)
@@ -99,7 +104,7 @@ namespace ReginaGameDev
             {
                 Debug.Log(i + ") " + queue[i].name + ": " + queue[i].speed);
             }
-            Debug.LogError("\n\n\n");
+         //   Debug.LogError("\n\n\n");
         }
 
         // For debugging purposes, randomize everyone's speed inside the initiativeQueue...
